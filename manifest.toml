@@ -13,7 +13,7 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "AGPL-3.0"
-website = "https://zoraxy.arozos.com/index.html"
+website = "https://zoraxy.aroz.org/"
 admindoc = "https://github.com/tobychui/zoraxy/wiki/Getting-Started"
 code = "https://github.com/tobychui/zoraxy"
 
