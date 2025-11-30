@@ -7,18 +7,18 @@ name = "Zoraxy"
 description.en = "General purpose HTTP reverse proxy and forwarding tool"
 description.fr = "Outil de proxy inverse et de transfert HTTP à usage général"
 
-version = "3.1.8~ynh1"
+version = "3.2.9~ynh1"
 
 maintainers = ["eric_G"]
 
 [upstream]
 license = "AGPL-3.0"
-website = "https://zoraxy.arozos.com/index.html"
+website = "https://zoraxy.aroz.org/"
 admindoc = "https://github.com/tobychui/zoraxy/wiki/Getting-Started"
 code = "https://github.com/tobychui/zoraxy"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = ["amd64", "armhf", "arm64"]
 multi_instance = true
@@ -45,12 +45,17 @@ ram.runtime = "50M"
     in_subdir = false
     extract = false
     rename = "zoraxy"
-    amd64.url = "https://github.com/tobychui/zoraxy/releases/download/v3.1.8/zoraxy_linux_amd64"
-    amd64.sha256 = "c91e101a4f6242a8f910a4cde3181fec0e11f582586198e7b2e1c19d1a7a5551"
-    armhf.url = "https://github.com/tobychui/zoraxy/releases/download/v3.1.8/zoraxy_linux_arm"
-    armhf.sha256 = "d3eac60f656b9c63af395fa8f9085b023c853ca254a2831295470a17f96cf506"
-    arm64.url = "https://github.com/tobychui/zoraxy/releases/download/v3.1.8/zoraxy_linux_arm64"
-    arm64.sha256 = "e2fe86375b9e8fe918f09e42a25dc17cbf1782f28895563c0e0d3632441b3ca0"
+    amd64.url = "https://github.com/tobychui/zoraxy/releases/download/v3.2.9/zoraxy_linux_amd64"
+    amd64.sha256 = "033f6dd64c9de17c3d1042f625637ab05ef9cea09e096d3825cd5e7c03dcffc4"
+    armhf.url = "https://github.com/tobychui/zoraxy/releases/download/v3.2.9/zoraxy_linux_arm"
+    armhf.sha256 = "5bb9cd876f38e436925cb2084f03a9d27f5bb62c6dd2e8e97f87033748a6848d"
+    arm64.url = "https://github.com/tobychui/zoraxy/releases/download/v3.2.9/zoraxy_linux_arm64"
+    arm64.sha256 = "3bf0d0a36c9cc4993ac5f836daa41aed58d9b1cd9ccf01c2d964451accaff350"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = "zoraxy_linux_amd64"
+    autoupdate.asset.arm64 = "zoraxy_linux_arm64"
+    autoupdate.asset.armhf = "zoraxy_linux_arm"
 
     [resources.system_user]
 
