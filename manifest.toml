@@ -55,7 +55,7 @@ ram.runtime = "50M"
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "zoraxy_linux_amd64"
     autoupdate.asset.arm64 = "zoraxy_linux_arm64"
-    autoupdate.asset.armhf = "zoraxy_linux_arm"
+    autoupdate.asset.armhf = "zoraxy_linux_arm$"
 
     [resources.system_user]
 
